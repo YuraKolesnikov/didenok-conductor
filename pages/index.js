@@ -1,24 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
+import classNames from 'classnames'
 
 import {
   Border,
-  Button,
-  ClientsSlider,
   Container,
   ContentBox,
-  Icon,
   Logo,
-  PhoneInput,
-  TextInput,
-  Navbar,
   Hero,
+  LargeBox,
+  SectionContactUs,
+  ClientsSlider,
 } from '../components'
-import { ICON_COLORS, ICON_NAMES, ICON_SIZES } from '../components/Icon/Icon'
 
 import css from './index.module.scss'
-import LargeBox from '../components/LargeBox/LargeBox'
-import classNames from 'classnames'
-import SectionContactUs from '../components/SectionContactUs/SectionContactUs'
 
 const LARGE_BOXES = [
   {
@@ -126,11 +120,11 @@ export default function Home() {
         <Border className={css.border_3} />
         <Border className={css.border_4} />
       </Container>
-      {/*<Border />
+      <Border />
       <Container
         className={classNames(css.container, css.clientsSlider)}>
         <ClientsSlider />
-      </Container>*/}
+      </Container>
       <Border />
       <SectionContactUs />
       <Border />

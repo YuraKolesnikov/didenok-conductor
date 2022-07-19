@@ -103,6 +103,7 @@ export const ICON_NAMES = {
 	TELEGRAM: 'telegram',
 	YANDEX: 'yandex',
 	HAMBURGER: 'hamburger',
+	BARCODE: 'barcode',
 	CLOSE: 'close',
 }
 
@@ -113,6 +114,7 @@ ICON_NAMES.LIST = [
 	ICON_NAMES.TELEGRAM,
 	ICON_NAMES.YANDEX,
 	ICON_NAMES.HAMBURGER,
+	ICON_NAMES.BARCODE,
 	ICON_NAMES.CLOSE,
 ]
 

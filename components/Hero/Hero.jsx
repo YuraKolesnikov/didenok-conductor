@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Button, Icon } from '../index'
+import { ICON_COLORS, ICON_NAMES, ICON_SIZES } from '../Icon/Icon'
+import { generateNumbers } from '../../lib/generateNumbers'
 
 import bg from '../../public/assets/hero.png'
+
 import css from './Hero.module.scss'
-import { ICON_COLORS, ICON_NAMES, ICON_SIZES } from '../Icon/Icon'
 
 const Hero = () => {
+	const [first, updateFirst] = useState([])
+	const [second, updateSecond] = useState([])
+
+	useEffect(() => {
+		updateFirst(generateNumbers(11))
+		updateSecond(generateNumbers(11))
+	}, [])
+
 	return (
 		<section className={css.hero} style={{ backgroundImage: `url(${bg.src})` }}>
 			<div className={css.content}>
@@ -19,12 +29,8 @@ const Hero = () => {
 						<Icon icon={ICON_NAMES.ARROW} color={ICON_COLORS.ACCENT_2} size={ICON_SIZES.LARGE} className={css.arrow} />
 					</h2>
 					<div className={css.generatedNumbers}>
-						<span className={css.number}>1</span>
-						<span className={css.number}>6</span>
-						<span className={css.number}>4</span>
-						<span className={css.number}>3</span>
-						<span className={css.number}>3</span>
-						<span className={css.number}>5</span>
+						{first.map((num, i) => <span className={css.number} key={`generated_number_${num}_${i}_${num * i}`}>{num}</span>)}
+						{second.map((num, i) => <span className={css.number} key={`generated_number_${num}_${i}_${num * i}`}>{num}</span>)}
 					</div>
 					<Icon icon="barcode" className={css.barcode} />
 				</div>

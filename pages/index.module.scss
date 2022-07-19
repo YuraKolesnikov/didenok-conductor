@@ -156,8 +156,13 @@
 
 .clientsSlider {
   background-color: #FFFFFF;
+  padding: 50px 35px;
 
-  @media (max-width: #{$s}) {
-    padding: 20px 10px;
+  @media (max-width: #{$l}) {
+    padding: 25px 25px;
+  }
+
+  @media (max-width: #{$m}) {
+    padding: 10px 10px;
   }
 }
