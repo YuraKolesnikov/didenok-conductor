@@ -1,0 +1,12 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.main {
+  background-color: $accent-1;
+  flex: 1;
+
+  @media (max-width: #{$m}) {
+    padding-top: 3px;
+  }
+}

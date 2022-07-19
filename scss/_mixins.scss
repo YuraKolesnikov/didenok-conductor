@@ -1,0 +1,50 @@
+/*
+  Hero .title
+  ContentBox .title
+  LargeBox .title
+  ContactsBox .item
+*/
+@mixin fontTitle {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  @media (max-width: #{$l}) {
+    font-size: 27px;
+    line-height: 27px;
+  }
+
+  @media (max-width: #{$s}) {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+/*
+  ContactBox .text
+  LargeBox .text
+  Input (with overriding font-weight: 500 and line-height: 23px
+*/
+@mixin fontText {
+  font-size: 18px;
+  line-height: 110%;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/*
+  Button
+  Form .legend
+*/
+@mixin fontSecondary {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  @media (max-width: #{$l}) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,25 @@
+.input {
+  @include fontText;
+  border: 1px solid $border;
+  border-radius: $border-radius-1;
+  padding: 16px 30px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    outline: 0;
+  }
+
+  @media (max-width: #{$l}) {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  @media (max-width: #{$m}) {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+}
