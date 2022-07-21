@@ -131,6 +131,7 @@
   border-radius: 14px;
   padding: 20px 7px;
   margin-left: 3.5px;
+  user-select: none;
 
   &:first-child {
     margin-left: 0;
@@ -189,6 +190,7 @@
   padding: 65px 25px;
   font-size: 24px;
   width: 360px;
+  user-select: none;
 
   @media (max-width: 1700px) {
     width: 21vw;
@@ -213,7 +215,7 @@
   }
 
   @media (max-width: #{$m}) {
-    width: 35vw;
+    width: 40vw;
     border-radius: 0 0 10px 10px;
     right: auto;
     left: 45px;
@@ -231,8 +233,15 @@
 
 .arrow {
   position: absolute;
+  z-index: 10;
   left: -60px;
   top: 100%;
+  cursor: pointer;
+  transition: transform .2s ease-in-out;
+
+  &:hover {
+    transform: scale(0.95)
+  }
 
   @media (max-width: #{$l}) {
     left: -40px;
@@ -244,6 +253,10 @@
     transform: rotate(-90deg);
     --width: 25px !important;
     --height: 25px !important;
+
+    &:hover {
+      transform: scale(0.95) rotate(-90deg);
+    }
   }
 
   @media (max-width: #{$s}) {

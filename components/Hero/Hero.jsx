@@ -17,6 +17,12 @@ const Hero = () => {
 		updateSecond(generateNumbers(11))
 	}, [])
 
+	const generateNewNumbers = () => {
+		console.log('YEET')
+		updateFirst(generateNumbers(11))
+		updateSecond(generateNumbers(11))
+	}
+
 	return (
 		<section className={css.hero} style={{ backgroundImage: `url(${bg.src})` }}>
 			<div className={css.content}>
@@ -26,7 +32,7 @@ const Hero = () => {
 				<div className={css.right}>
 					<h2 className={css.title}>
 						Ваш счастливый билет в Digital
-						<Icon icon={ICON_NAMES.ARROW} color={ICON_COLORS.ACCENT_2} size={ICON_SIZES.LARGE} className={css.arrow} />
+						<Icon onClick={generateNewNumbers} icon={ICON_NAMES.ARROW} color={ICON_COLORS.ACCENT_2} size={ICON_SIZES.LARGE} className={css.arrow} />
 					</h2>
 					<div className={css.generatedNumbers}>
 						{first.map((num, i) => <span className={css.number} key={`generated_number_${num}_${i}_${num * i}`}>{num}</span>)}

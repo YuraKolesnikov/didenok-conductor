@@ -137,7 +137,7 @@ export const ICON_SIZES = {
 
 ICON_SIZES.LIST = [ ICON_SIZES.MEDIUM, ICON_SIZES.LARGE ]
 
-const Icon = ({ icon, color, size, className }) => {
+const Icon = ({ icon, color, size, onClick, className }) => {
 	const classList = classNames({
 		[css.icon]: true,
 		...(icon !== ICON_NAMES.SMALL_LOGO && { [css[color]]: true, [css[size]]: true }),
@@ -146,7 +146,7 @@ const Icon = ({ icon, color, size, className }) => {
 	})
 
 	return (
-		<span className={classList}>{ICONS[icon]}</span>
+		<span onClick={onClick} className={classList}>{ICONS[icon]}</span>
 	)
 }
 
