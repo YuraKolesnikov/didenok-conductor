@@ -6,11 +6,16 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  transition: border-color .2s ease-in-out;
 
   &:hover,
   &:active,
   &:focus-visible {
     outline: 0;
+  }
+
+  &.invalid {
+    border-color: red;
   }
 
   @media (max-width: #{$l}) {

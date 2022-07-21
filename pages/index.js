@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { Element } from 'react-scroll'
 
 import {
   Border,
@@ -58,57 +59,59 @@ export default function Home() {
       </Container>
       <Border />
       <Container className={css.container}>
-        <div className={css.grid}>
-          <ContentBox
-            title="Strategy"
-            text="Разрабатываем коммуникационные и SMM-стратегии для брендов в DIGITAL."
-            underscoreColor="white"
-            backgroundColor="accent_2"
-          />
-          <ContentBox
-            title="Creative"
-            text="Креативим, пишем сценарии, разрабатываем спецпроекты."
-            underscoreColor="accent_2"
-            backgroundColor="black"
-          />
-          <ContentBox
-            className={css.tall}
-            title="SMM"
-            text="Комплексное ведение соцсетей бренда: от контент-плана до продвижения."
-            underscoreColor="accent_2"
-            backgroundColor="black"
-          />
-          <ContentBox
-            title="Production"
-            text="Продюсируем съёмки любой сложности.Фотографируем, снимаем, монтируем."
-            underscoreColor="accent_2"
-            backgroundColor="white"
-          />
-          <ContentBox
-            title="Promo"
-            text="Протестируем и запустим только эффективные инструменты продвижения: таргетинг, посевы, инфлюенсеры, контекстная и SEO-реклама."
-            underscoreColor="accent_2"
-            backgroundColor="black"
-          />
-          <ContentBox
-            title="Design"
-            text="Дизайн у нас в крови: от простой графики для соцсетей до сложных 3D-роликов."
-            underscoreColor="accent_2"
-            backgroundColor="white"
-          />
-          <ContentBox
-            title="Digital Pr"
-            text="Занимаемся корпоративным PR во всех его проявлениях: абонентский, антикризисный, репутационный маркетинг и спецпроекты."
-            underscoreColor="accent_2"
-            backgroundColor="black"
-          />
-          <ContentBox
-            title="App / Web Production"
-            text="Cоздаем лендинги и сайты, разрабатываем приложения и ботов."
-            underscoreColor="accent_2"
-            backgroundColor="white"
-          />
-        </div>
+        <Element id="services" name="services">
+          <div className={css.grid}>
+            <ContentBox
+              title="Strategy"
+              text="Разрабатываем коммуникационные и SMM-стратегии для брендов в DIGITAL."
+              underscoreColor="white"
+              backgroundColor="accent_2"
+            />
+            <ContentBox
+              title="Creative"
+              text="Креативим, пишем сценарии, разрабатываем спецпроекты."
+              underscoreColor="accent_2"
+              backgroundColor="black"
+            />
+            <ContentBox
+              className={css.tall}
+              title="SMM"
+              text="Комплексное ведение соцсетей бренда: от контент-плана до продвижения."
+              underscoreColor="accent_2"
+              backgroundColor="black"
+            />
+            <ContentBox
+              title="Production"
+              text="Продюсируем съёмки любой сложности.Фотографируем, снимаем, монтируем."
+              underscoreColor="accent_2"
+              backgroundColor="white"
+            />
+            <ContentBox
+              title="Promo"
+              text="Протестируем и запустим только эффективные инструменты продвижения: таргетинг, посевы, инфлюенсеры, контекстная и SEO-реклама."
+              underscoreColor="accent_2"
+              backgroundColor="black"
+            />
+            <ContentBox
+              title="Design"
+              text="Дизайн у нас в крови: от простой графики для соцсетей до сложных 3D-роликов."
+              underscoreColor="accent_2"
+              backgroundColor="white"
+            />
+            <ContentBox
+              title="Digital Pr"
+              text="Занимаемся корпоративным PR во всех его проявлениях: абонентский, антикризисный, репутационный маркетинг и спецпроекты."
+              underscoreColor="accent_2"
+              backgroundColor="black"
+            />
+            <ContentBox
+              title="App / Web Production"
+              text="Cоздаем лендинги и сайты, разрабатываем приложения и ботов."
+              underscoreColor="accent_2"
+              backgroundColor="white"
+            />
+          </div>
+        </Element>
       </Container>
       <Border />
       <Container className={css.largeBoxGrid}>

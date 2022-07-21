@@ -6,9 +6,40 @@ import css from './SectionContactUs.module.scss'
 import { ICON_COLORS, ICON_NAMES, ICON_SIZES } from '../Icon/Icon'
 
 const SectionContactUs = () => {
+	const [formValues, updateFormValues] = useState({
+		name: '',
+		phone: ''
+	})
+
+	const [errors, updateErrors] = useState({
+		name: false,
+		phone: false,
+	})
+
+	const onUpdateField = ({ key, value }) => {
+		updateFormValues({
+			...formValues,
+			[key]: value
+		})
+	}
+
 	const handleSubmit = e => {
 		e.preventDefault()
-		console.log(e.currentTarget.name.value, e.currentTarget.phone.value)
+		updateErrors({
+			name: false,
+			phone: false,
+		})
+
+		updateErrors({
+			name: !formValues.name,
+			phone: !formValues.phone
+		})
+
+		if (!!formValues.name && !!formValues.phone) {
+			/* Тута можно прикрутить запрос на бэк */
+			console.log(formValues)
+			alert(`Запрос на бэк с именем ${formValues.name} и телефоном ${formValues.phone}`)
+		}
 	}
 
 	return (
@@ -25,10 +56,24 @@ const SectionContactUs = () => {
 				<legend className={css.legend}>Ты всегда можешь связаться с нами по вопросам сотрудничества, партнерства</legend>
 				<div className={css.fields}>
 					<fieldset>
-						<TextInput id="name" name="name" placeholder="Имя" />
+						<TextInput
+							onInput={value => onUpdateField({ key: 'name', value })}
+							value={formValues.name}
+							invalid={errors.name}
+							id="name"
+							name="name"
+							placeholder="Имя"
+						/>
 					</fieldset>
 					<fieldset>
-						<PhoneInput id="phone" name="phone" placeholder="Телефон" />
+						<PhoneInput
+							onInput={value => onUpdateField({ key: 'phone', value })}
+							value={formValues.phone}
+							invalid={errors.phone}
+							id="phone"
+							name="phone"
+							placeholder="Телефон"
+						/>
 					</fieldset>
 					<button className={css.submitButton} type="submit">Отправить</button>
 				</div>

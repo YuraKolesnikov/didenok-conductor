@@ -29,6 +29,7 @@
   width: 100%;
   display: flex;
   align-items: stretch;
+  justify-content: space-between;
 }
 
 .logoContainer {
@@ -88,11 +89,11 @@
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 30px 100px;
+  padding: 30px 60px 30px 100px;
   border-left: 1px solid #000000;
 
   @media (max-width: 1400px) {
-    padding: 30px 6vw;
+    padding: 30px 5vw;
   }
 
   @media (max-width: #{$xxl}) {
@@ -103,7 +104,7 @@
   @media (max-width: #{$l}) {
     font-size: 13px;
     line-height: 13px;
-    padding: 25px 6vw;
+    padding: 25px 5vw;
   }
 
   @media (max-width: #{$m}) {
@@ -129,9 +130,12 @@
 
   @media (max-width: #{$m}) {
     padding: 20px 4vw 20px 6vw;
-    height: 60px;
     width: 50%;
     justify-content: center;
+  }
+
+  @media (max-width: #{$s}) {
+    height: 60px;
   }
 }
 

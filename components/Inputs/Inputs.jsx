@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import InputMask from 'react-input-mask'
 import { string, func, bool } from 'prop-types'
 
@@ -20,6 +21,7 @@ const TextInput = ({
 	value,
 	onInput,
 	disabled,
+	invalid,
 	readOnly,
 	placeholder,
 }) => (
@@ -32,7 +34,7 @@ const TextInput = ({
 		readOnly={readOnly}
 		placeholder={placeholder}
 		type="text"
-		className={css.input}
+		className={classNames(css.input, invalid && css.invalid)}
 	/>
 )
 
@@ -44,6 +46,7 @@ const PhoneInput = ({
 	value,
 	onInput,
 	disabled,
+	invalid,
 	readOnly,
 	placeholder,
 }) => (
@@ -60,7 +63,7 @@ const PhoneInput = ({
 		readOnly={readOnly}
 		placeholder={placeholder}
 		type="text"
-		className={css.input}
+		className={classNames(css.input, invalid && css.invalid)}
 	/>
 )
 
