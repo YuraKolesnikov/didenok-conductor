@@ -1,104 +1,121 @@
 .box {
-  border-radius: 30px;
-  max-width: 350px;
-  width: 100%;
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  padding-top: calc(100% - 2px);
+	border-radius: 30px;
+	max-width: 350px;
+	width: 100%;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding-top: calc(100% - 2px);
+	cursor: pointer;
+	transform: translateZ(0);
+	will-change: transform;
+	transition: transform 0.35s ease-in-out;
 
-  @media (max-width: #{$l}) {
-    border-radius: 20px;
-  }
+	&:hover {
+		transform: scale(1.03);
+	}
 
-  @media (max-width: #{$m}) {
-    border-radius: 16px;
-  }
+	@media (max-width: #{$l}) {
+		border-radius: 20px;
+	}
+
+	@media (max-width: #{$m}) {
+		border-radius: 16px;
+	}
+}
+
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .content {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  max-width: 88%;
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	z-index: 2;
+	max-width: 88%;
 
-  @media (max-width: #{$xxl}) {
-    top: 20px;
-  }
+	@media (max-width: #{$xxl}) {
+		top: 20px;
+	}
 
-  @media (max-width: #{$l}) {
-    top: 20px;
-    left: 12px;
-  }
+	@media (max-width: #{$l}) {
+		top: 20px;
+		left: 12px;
+	}
 
-  @media (max-width: #{$s}) {
-    top: 5vw;
-    left: 10px;
-  }
+	@media (max-width: #{$s}) {
+		top: 5vw;
+		left: 10px;
+	}
 }
 
 .title {
-  @include fontTitle;
-  margin: 0 0 30px;
+	@include fontTitle;
+	margin: 0 0 30px;
 
-  @media (max-width: 1700px) {
-    font-size: 2.6vw;
-    line-height: 100%;
-  }
+	@media (max-width: 1700px) {
+		font-size: 2.6vw;
+		line-height: 100%;
+	}
 
-  @media (max-width: #{$xxl}) {
-    margin: 0 0 20px;
-  }
+	@media (max-width: #{$xxl}) {
+		margin: 0 0 20px;
+	}
 
-  @media (max-width: #{$m}) {
-    margin: 0 0 15px;
-  }
+	@media (max-width: #{$m}) {
+		margin: 0 0 15px;
+	}
 
-  @media (max-width: #{$s}) {
-    font-size: 20px;
-  }
+	@media (max-width: #{$s}) {
+		font-size: 20px;
+	}
 }
 
 .text {
-  @include fontText;
+	@include fontText;
 
-  @media (max-width: 1700px) {
-    font-size: 1.2vw;
-  }
+	@media (max-width: 1700px) {
+		font-size: 1.2vw;
+	}
 
-  @media (max-width: #{$l}) {
-    font-size: 1.3vw;
-  }
+	@media (max-width: #{$l}) {
+		font-size: 1.3vw;
+	}
 
-  @media (max-width: #{$m}) {
-    font-size: 1.5vw;
-  }
+	@media (max-width: #{$m}) {
+		font-size: 1.5vw;
+	}
 
-  @media (max-width: #{$s}) {
-    font-size: 12px;
-  }
+	@media (max-width: #{$s}) {
+		font-size: 12px;
+	}
 }
 
 .white {
-  color: $text-light;
+	color: $text-light;
 }
 
 .accent_2 {
-  color: $accent-2;
+	color: $accent-2;
 }
 
 .bg_white {
-  background-color: $bg-light;
-  border: 1px solid $border;
+	background-color: $bg-light;
+	border: 1px solid $border;
 }
 
 .bg_black {
-  background-color: $bg-dark;
-  border: 1px solid $bg-dark;
-  color: $text-light;
+	background-color: $bg-dark;
+	border: 1px solid $bg-dark;
+	color: $text-light;
 }
 
 .bg_accent_2 {
-  background-color: $accent-2;
-  border: 1px solid $accent-2;
+	background-color: $accent-2;
+	border: 1px solid $accent-2;
 }
